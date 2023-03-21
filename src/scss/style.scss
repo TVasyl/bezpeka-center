@@ -1,0 +1,56 @@
+//Щоб підключити шрифти, необхідно їх імпортувати (@import "fonts";)
+//Та добавити в body font-family: Назва шрифту;
+
+//Шлях до картинок має починатись з @img
+
+@import "styles_reset";
+@import "fonts";
+@import "header";
+@import "main";
+@import "footer";
+
+@import 'varibles';
+
+@import "../../node_modules/swiper/swiper-bundle.css";
+// @import url('./styles_reset');
+
+
+body {
+    background-color: rgb(180, 180, 180);
+    font-family: Roboto;
+    color: $fontColorGrey;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+   
+    // background: url("@img/K5T4O2rcSkc.jpg") 0 0 no-repeat;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+[class*="__container"]{ 
+    max-width: 1440px; 
+    margin: 0 auto; 
+    // padding: 0px 15px; 
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    span {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: aquamarine;
+    }
+}
+
