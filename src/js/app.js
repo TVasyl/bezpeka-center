@@ -1,8 +1,37 @@
 import * as flsFunctions from "./modules/functions.js";
-import {swiper1} from "./modules/swipers.js";
+import {swiper1, swiper2} from "./modules/swipers.js";
 
 swiper1();
+swiper2();
 
+
+
+// Show hidden menu of burger
+document.addEventListener('click', handlerMenu);
+
+function handlerMenu(e) {
+    const targetItem = e.target;
+
+    if (targetItem.closest('.icon-menu')) {
+        console.log(targetItem);
+        document.documentElement.classList.toggle('menu-open');
+    }
+}
+
+
+
+// Sow form for feedback call //
+const callMeBtn = document.querySelector(".call-me");
+const callMeForm = document.querySelector(".page__feedback");
+
+
+callMeBtn.addEventListener("click", () => {
+  callMeForm.classList.toggle("show-form");
+});
+
+
+
+// Show text on the service items //
 const itemService = document.querySelector(".service__items");
 
 itemService.addEventListener("click", (e) => {
@@ -20,6 +49,5 @@ itemService.addEventListener("click", (e) => {
     }
   }
 );
-
 
 flsFunctions.isWebp();

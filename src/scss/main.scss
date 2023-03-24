@@ -11,41 +11,58 @@
 .page__main {
 }
 .main {
+    &__container {
+        // background: url("../img/main/background-image.jpeg") 0 0 / 100% no-repeat;
+        background: url("../img/main/background-image-2.jpeg") 0 0 / 100% no-repeat;
+    }
+    &__background {
+        height: 600px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        // background-image: image-set(no-repeat);
+        background-color: #2c3e4ed3;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__contant {
+        margin-left: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__describe {
+    }
+    &__title h1 {
+        font-size: 64px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 40px;
+    }
+    &__motto h2{
+        font-weight: 500;
+        font-size: 24px;
+        color: white;
+    }
+    &__image {
+        margin-right: 40px;
+        img {
+            height: 400px;
+            width: 700px;
+        }
+    }
+    &__call-me {
+        display: flex;
+        justify-content: center;
+        
+    }
 }
-.main__container {
-    background-color: $darckGrey;
-}
-.main__background {
-    height: 600px;
-    padding-top: 100px;
-    padding-bottom: 50px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.main__contant {
-    margin-left: 100px;
-}
-.main__title h1 {
-    font-size: 64px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 40px;
-}
-.main__motto h2{
-    font-weight: 500;
+.button {
+    // height: 50px;
+    // width: 250px;
     font-size: 24px;
-    color: white;
-}
-.main__call-me {
-    display: flex;
-    justify-content: center;
-}
-.call-me {
-    height: 50px;
-    width: 250px;
-    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 30px;
     background-color: $colorGreen;
     color: $textInButton;
     &:hover {
@@ -53,7 +70,12 @@
         transition: 0.5s ease 0s;
     }
 }
-.batton {
+
+.page__feedback {
+    display: none;
+}
+.show-form {
+    display: block;
 }
 
 /* Services ===========================================================================*/
@@ -220,7 +242,7 @@
 
 .complex-solution {
     &__container {
-        height: 400px;
+        // height: 400px;
         background-color: $darckGrey;
         // background-color: $backWite;
         // padding-top: 50px;
@@ -230,15 +252,179 @@
     &__items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__item {
         height: 250px;
         width: 200px;
-        border: 3px solid Grey;
+        // border: 3px solid Grey;
         padding: 15px;
         text-align: center;
     }
     &__image {
         margin-bottom: 10px;
+        height: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    &__text {
+        p {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+}
+
+// ********** Solution about **********
+
+.solution-about {
+    &__container {
+        background-color: #fff;
+        // height: 500px;
+        padding: 80px 90px;
+        display: flex;
+        gap: 50px;
+    }
+    &__describe {
+        flex: 0 1 40%;
+    }
+    &__describe h3{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__describe p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.advantages {
+    flex: 0 1 60%;    
+    // justify-content: center;
+    // align-items: center;
+    // text-align: center;
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__items {
+        display: flex;
+        gap: 30px;
+    }
+    &__item {
+        text-align: center;
+
+    }
+    &__item-number {
+        height: 120px;
+        width: 120px;
+        border: 3px solid $fontColorGrey;
+        margin: 0 auto 30px;
+        font-size: 64px;
+        font-weight: 700;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item-text {
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .solution-about {
+        &__container {
+            flex-direction: column;
+        }
+    }
+    
+}
+
+@media (max-width: 620px) {
+    .solution-about__container {
+        padding: 80px 40px;
+    }
+    .advantages {
+        flex-direction: column;
+        &__item-number {
+            height: 150px;
+            width: 150px;
+        }
+    }
+}
+
+
+/* Order comolex solution ===========================================================================*/
+
+
+.order-comolex-solution {
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: $darckGrey;
+        color: #fff;
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 27px;
+        margin-right: 76px;
+    }
+    &__form {
+        display: flex;
+        gap: 77px;
+    }
+    .button {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}
+.form-order{
+    &__control {
+        font-weight: 500;
+        padding: 5px 10px;
+        background-color: #D9D9D9;
+    }
+}
+
+/* Order comolex solution ===========================================================================*/
+.work {
+    &__container {
+        padding: 90px 40px;
+        background-color: #fff;
+
+    }
+    &__text {
+        text-align: center;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 27px;
+        margin-bottom: 40px;
+    }
+    &__swiper {
+        margin: 40px;
+    }
+    &__item {
+        img {
+            // text-align: center;
+            // margin: 0 auto;
+        }
+    }
+    .swiper-pagination-bullet-active {
+        background: $colorGreen;
+    }
+    .swiper-button-next::after {         
+            color: $colorGreen;        
+    }
+    .swiper-button-prev::after {         
+            color: $colorGreen;        
     }
 }
