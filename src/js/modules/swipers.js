@@ -96,3 +96,52 @@ export function swiper2 () {new Swiper('.work__swiper',{
     // }
   })
 }
+
+export function swiper3 () {new Swiper('.video__swiper',{
+  // speed: 100,
+  // loop:true,
+  spaceBetween: 50,
+  // autoHeight: true,
+  // effect: 'flip',
+  modules: [ Navigation, Pagination ],
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
+  },
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+  slidesPerView: 4,
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    319.98: {
+      slidesPerView: 1
+    },
+    635: {
+      slidesPerView: 2
+    },
+    930: {
+      slidesPerView: 3
+    },
+    // 1225: {
+    //   slidesPerView: 3
+    // },
+    // 319.98: {
+    //   slidesPerView: 1
+    // },
+    // 479.98: {
+    //   slidesPerView: 2
+    // },
+    // 767.98: {
+    //   slidesPerView: 3
+    // },
+    // 991.98: {
+    //   slidesPerView: 4
+    // },
+  }
+})
+}

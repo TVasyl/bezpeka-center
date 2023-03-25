@@ -19,7 +19,7 @@
 .title {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 }
 .text {
     font-weight: 500;
@@ -440,22 +440,12 @@
     &__item {
     }
     &__item-slide {
-        // margin: 0 auto;
         text-align: center;
-        
-        // margin-top: 20px;
-        // width: 100%;
-        // height: 100%;
-        // object-fit: cover;
     }
     &__item-slide {
         img {
-            // width: 100%;
-            // height: 100%;
             object-fit: cover;
             box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
-
-            // max-width: 400px;
         }
     }
 
@@ -771,6 +761,7 @@
         flex: 0 1 50%;
     }
     &__title {
+        margin-bottom: 40px;
         h2 {
             font-size: 32px;
         }
@@ -828,6 +819,76 @@
         &__button {
             width: 100%;
             padding: 10px;
+        }
+    }
+}
+
+/* Consultation ===========================================================================*/
+.video {
+    &__container {
+        padding: 100px 40px;
+        background-color: $darckGrey;
+    }
+    &__title {
+        color: #fff;
+        margin-bottom: 40px;
+        h2 {
+            display: inline-block;
+            margin-right: 150px;
+            position: relative;
+            // margin-right: 10px;
+        }
+        h2::after {
+            content: url("../img/video/youtube.svg");
+            position: absolute;
+            // right: 5px
+
+        }
+        a {
+            display: inline-block;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+
+    }
+    &__item-slide {
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+        }
+        p {
+            color: #fff;
+            text-align: start;
+        }
+        // text-align: center;
+        
+    }
+    &__swiper{
+        padding-bottom: 50px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $colorGreen;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .video {
+        &__container {
+            padding: 70px 20px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .video {
+        &__container {
+            padding: 50px 20px;
+        }
+        &__swiper{
+            padding-bottom: 40px;
         }
     }
 }

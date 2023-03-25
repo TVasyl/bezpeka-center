@@ -1,8 +1,9 @@
 import * as flsFunctions from "./modules/functions.js";
-import {swiper1, swiper2} from "./modules/swipers.js";
+import {swiper1, swiper2, swiper3} from "./modules/swipers.js";
 
 swiper1();
 swiper2();
+swiper3();
 
 
 
