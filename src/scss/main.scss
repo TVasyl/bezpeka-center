@@ -8,6 +8,24 @@
 .page {
     flex: 1 1 auto;
 }
+
+// Input form control
+.control {
+    font-weight: 500;
+    padding: 5px 10px;
+    background-color: #D9D9D9;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
 .page__main {
 }
 .main {
@@ -393,13 +411,13 @@
         padding: 5px 10px;
     }
 }
-.form-order{
-    &__control {
-        font-weight: 500;
-        padding: 5px 10px;
-        background-color: #D9D9D9;
-    }
-}
+// .form-order{
+//     &__control {
+//         font-weight: 500;
+//         padding: 5px 10px;
+//         background-color: #D9D9D9;
+//     }
+// }
 
 /* Work ===========================================================================*/
 .work {
@@ -582,10 +600,13 @@
         border: 1px solid #fff;
         padding: 10px;
     }
+    a:hover {
+        
+    }
     h2 {
         font-weight: 700;
         font-size: 48px;
-        line-height: 27px;
+        line-height: 120%;
         margin-top: 40px;
         margin-bottom: 40px;
         color: #fff;
@@ -601,6 +622,9 @@
         line-height: 150%; /* 24/16 */
         color: #fff;
     }
+}
+.header-main__label:hover {
+    transform: scale(1.05);
 }
 // .testimonials__header .header-main__title{
 //     max-width: none;
@@ -670,13 +694,6 @@
         line-height: 157.142857%; /* 22/14 */
     }
 }
-.user-testemonial
-.user-testemonial
-.user-testemonial
-.user-testemonial
-.item-testemonial {
-
-}
 .item-testemonial__title {
     font-weight: 500;
     font-size: 32px;
@@ -701,8 +718,10 @@
 
 @media (max-width: 991.98px) {
     .testimonials {
-        // margin-top: 50px;
-        // margin-bottom: 50px;
+        &__container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
     }
     .testimonials__container {
         flex-direction: column;
@@ -720,8 +739,10 @@
 }
 @media (max-width: 767.98px) {
     .testimonials {
-        // margin-top: 30px;
-        // margin-bottom: 30px;
+        &__container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
     }
     .header-main__body {
         flex-direction: column;
@@ -734,5 +755,79 @@
 @media (max-width: 479.98px) {
     .testimonials__actions {
     align-self:normal;
+    }
+}
+
+/* Consultation ===========================================================================*/
+.consultation {
+    &__container {
+        background-color: #fff;
+        padding: 100px 40px;
+        display: flex;
+        gap: 40px;
+    }
+    &__about {
+        text-align: center;
+        flex: 0 1 50%;
+    }
+    &__title {
+        h2 {
+            font-size: 32px;
+        }
+    }
+    &__text .text{
+        margin: 0 auto;
+        max-width: 400px; 
+    }
+    &__form {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__control {
+        font-size: 24px;
+        margin-bottom: 22px;
+        height: 64px;
+        width: 348px;
+
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+    }
+    &__button {
+        height: 64px;
+        width: 348px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .consultation {
+        &__container {
+            padding: 70px 20px;
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .consultation {
+        &__container {
+            padding: 50px 20px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .consultation { 
+        &__control {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+            padding: 10px;
+        }
     }
 }
