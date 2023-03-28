@@ -44,7 +44,6 @@ itemService.addEventListener("click", (e) => {
   }
 
     if (e.target.classList.contains("item-service__about")) {
-      console.log('ok');
       e.target.closest('.item-service__about').classList.toggle("show-text");
       e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
     }

@@ -4,7 +4,7 @@ export function swiper1 () {new Swiper('.service__items',{
     // speed: 100,
     // loop:true,
     spaceBetween: 50,
-    autoHeight: true,
+    // autoHeight: true,
     // effect: 'flip',
     modules: [ Navigation, Pagination ],
     navigation: {
