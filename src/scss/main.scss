@@ -29,6 +29,7 @@
 .page__main {
 }
 .main {
+    padding-top: 166px;
     &__container {
         // background: url("../img/main/background-image.jpeg") 0 0 / 100% no-repeat;
         background: url("../img/main/background-image-2.jpeg") 0 0 / 100% no-repeat;
@@ -890,5 +891,14 @@
         &__swiper{
             padding-bottom: 40px;
         }
+    }
+}
+
+/* Brand ===========================================================================*/
+.brand {
+    &__container {
+        padding: 100px 40px;
+        background-color: #fff;
+        text-align: center;
     }
 }

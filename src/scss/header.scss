@@ -1,5 +1,9 @@
 @import 'varibles';
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid $darckGrey;
     &__contacts {
         a{
             color: white;
@@ -13,7 +17,9 @@
     }
 }
 .contacts-header {
-
+    // position: fixed;
+    width: 100%;
+    z-index: 10;
     &__phones a {
         padding-left: 20px;
         margin-right: 20px;
@@ -34,7 +40,7 @@
     }
     &__social {
         display: flex;
-    gap: 10px;
+        gap: 10px;
     }
 }
 .header-social__link {

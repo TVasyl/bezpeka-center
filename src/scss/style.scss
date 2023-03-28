@@ -20,6 +20,7 @@ body {
     color: $fontColorGrey;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    line-height: 150%;
    
     // background: url("@img/K5T4O2rcSkc.jpg") 0 0 no-repeat;
 }
@@ -29,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: clip;
+    // scroll-behavior: smooth;
 }
 
 [class*="__container"]{ 
@@ -40,16 +42,4 @@ body {
 
 
 
-
-@media (max-width: 768px) {
-    span {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-color: aquamarine;
-    }
-}
 
