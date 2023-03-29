@@ -204,8 +204,13 @@
 }
 .item-service {
     position: relative;
+    // max-width: 290px;
+    // aspect-ratio: 4/3;
     &__image {
         img {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -909,7 +914,6 @@
             margin-right: 150px;
             position: relative;
             margin-bottom: 20px;
-            // margin-right: 10px;
         }
         h2::after {
             content: '';
@@ -920,7 +924,6 @@
             position: absolute;
             bottom: -8px;
             right: -110px;
-            // padding: auto 0;
         }
         a {
             display: inline-block;
@@ -931,21 +934,61 @@
 
     }
     &__item-slide {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: url('../img/video/video-picto.svg')  no-repeat center / 20%;
+
+        transition: 0.5s ease 0s;
+        
+        &:hover {
+            cursor: pointer;
+            background-size: 23%;
+            transition: 0.3s ease 0s;
+        }
+
+
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+        // z-index: 10;
+        // iframe {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+
+        // }
         img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            object-fit: cover;
             margin-bottom: 20px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-
+            z-index: -100;
         }
         p {
             color: #fff;
             text-align: start;
         }
-        // text-align: center;
         
     }
     &__swiper{
         padding-bottom: 50px;
+    }
+    &__swiper-slide{        
+        color: #fff;
+    }
+
+    &__item-slide{
+        margin-bottom: 10px;
     }
 
     .swiper-pagination-bullet-active {
