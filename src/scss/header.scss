@@ -55,10 +55,9 @@
     }
 }
 
+/** --------- Logo and navigation --------- **/
 .header__container {
     background-color: white;
-    // padding-top: 5px;
-    // padding-bottom: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -69,7 +68,7 @@
         margin-top: 15px;
         margin-bottom: 15px;
         img {
-            height: 75px;
+            height: 60px;
         }
     }
     &__navigation {
