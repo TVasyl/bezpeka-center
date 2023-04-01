@@ -38,11 +38,11 @@
     }
     &__social {
         display: flex;
-        gap: 10px;
+        gap: 20px;
     }
 }
 .header-social__link img{
-    height: 30px;
+    height: 25px;
 }
 @media (max-width: 767.98px) {
     .contacts-header {
