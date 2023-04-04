@@ -147,7 +147,7 @@ export function swiperVideo () {new Swiper('.video__swiper',{
 }
 export function brandSwiper() {new Swiper('.brand__swiper',{
   modules: [Autoplay],
-  speed: 100,
+  // speed: 100,
     autoplay: {
       autoplay: {
         delay: 5000,

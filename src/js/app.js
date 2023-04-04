@@ -1,14 +1,23 @@
 import * as flsFunctions from "./modules/functions.js";
 import {swiperService, swiperWork, swiperVideo, brandSwiper} from "./modules/swipers.js";
+import { animOnScroll } from "./modules/animations.js";
 
 swiperService();
 swiperWork();
 swiperVideo();
 brandSwiper();
-// brandSwiper.autoplay.start();
-// swiper4.slideNext(100);
 
 
+/**
+ * Add input mask like phone number to all tel-input
+ */
+const telSelector = document.querySelectorAll('.tel');
+const inputMask = new Inputmask('+38 (999) 999-99-99');
+telSelector.forEach(inp => inputMask.mask(inp));
+
+
+
+const orderButton = document.querySelectorAll('.form-order__button');
 
 // Show hidden menu of burger
 document.addEventListener('click', handlerMenu);
@@ -59,45 +68,18 @@ flsFunctions.isWebp();
 /**
  * Set animation
  */
-let animItems = document.querySelectorAll('._anim-items'); // ._anim-items - клас який необхідно призначати елементам які ви хочете анімувати //
-
-if (animItems.length > 0) {
-  window.addEventListener('scroll', animOnScroll)
-  
-  function animOnScroll() {
-    for (let index = 0; index < animItems.length; index++) {
-      const animItem = animItems[index];
-      const animItemHeight = animItem.offsetHeight;
-      const animItemOffset = offset(animItem).top;
-      const animStart = 4;
-
-      let animItemPoint = window.innerHeight - animItemHeight / animStart;
-
-      if (animItemHeight > window.innerHeight) {
-        animItemPoint = window.innerHeight - window.innerHeight / animStart;
-      }
-
-      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-        animItem.classList.add('_anime'); //_anime - клас який викликає початок анімації та повертає елемент у реальну позицію //
-      } else {
-        // _anim-no-hide - клас яки призначають для елемента анімація якогоне має повторюватись //
-        if (!animItem.classList.contains('_anim-no-hide')) {
-          animItem.classList.remove('_anime');          
-        }
-      }
-    }
-  }
-
-  function offset(el) {
-    const rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
-  }
-
   setTimeout(() => {
     animOnScroll();    
   }, 0);
-}
 
 
+
+
+orderButton.forEach(btn => {
+  console.log('+');
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    const formData = new FormData(e.target.closest('.form-order'));
+    console.log(Object.fromEntries( formData));
+  })
+});
