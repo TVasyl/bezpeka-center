@@ -1331,4 +1331,20 @@
         background-color: #fff;
         text-align: center;
     }
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__swiper-slide {
+        height: 200px;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        max-width: 300px;
+        img {
+            width: 100%;
+        }
+    }
 }

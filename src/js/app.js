@@ -1,9 +1,12 @@
 import * as flsFunctions from "./modules/functions.js";
-import {swiper1, swiper2, swiper3} from "./modules/swipers.js";
+import {swiperService, swiperWork, swiperVideo, brandSwiper} from "./modules/swipers.js";
 
-swiper1();
-swiper2();
-swiper3();
+swiperService();
+swiperWork();
+swiperVideo();
+brandSwiper();
+// brandSwiper.autoplay.start();
+// swiper4.slideNext(100);
 
 
 
@@ -96,3 +99,5 @@ if (animItems.length > 0) {
     animOnScroll();    
   }, 0);
 }
+
+

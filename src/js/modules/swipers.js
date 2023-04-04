@@ -1,6 +1,6 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
-export function swiper1 () {new Swiper('.service__items',{
+export function swiperService () {new Swiper('.service__items',{
     // speed: 100,
     // loop:true,
     spaceBetween: 50,
@@ -48,7 +48,7 @@ export function swiper1 () {new Swiper('.service__items',{
     }
   })
 }
-export function swiper2 () {new Swiper('.work__swiper',{
+export function swiperWork () {new Swiper('.work__swiper',{
     // speed: 100,
     loop:true,
     // spaceBetween: 50,
@@ -97,7 +97,7 @@ export function swiper2 () {new Swiper('.work__swiper',{
   })
 }
 
-export function swiper3 () {new Swiper('.video__swiper',{
+export function swiperVideo () {new Swiper('.video__swiper',{
   // speed: 100,
   // loop:true,
   spaceBetween: 50,
@@ -144,4 +144,35 @@ export function swiper3 () {new Swiper('.video__swiper',{
     // },
   }
 })
+}
+export function brandSwiper() {new Swiper('.brand__swiper',{
+  modules: [Autoplay],
+  speed: 100,
+    autoplay: {
+      autoplay: {
+        delay: 5000,
+      },
+    },
+    loop:true,
+    spaceBetween: 70,
+
+    // slidesPerView: 4,
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      319.98: {
+        slidesPerView: 1
+      },
+      635: {
+        slidesPerView: 2
+      },
+      930: {
+        slidesPerView: 3
+      },
+      1225: {
+        slidesPerView: 4
+      }
+    }
+  })
 }
