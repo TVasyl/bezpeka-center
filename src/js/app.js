@@ -1,6 +1,10 @@
+"use strict";
+
 import * as flsFunctions from "./modules/functions.js";
 import {swiperService, swiperWork, swiperVideo, brandSwiper} from "./modules/swipers.js";
 import { animOnScroll } from "./modules/animations.js";
+import { messageEvent } from "./modules/messageevent.js";
+
 
 swiperService();
 swiperWork();
@@ -11,13 +15,26 @@ brandSwiper();
 /**
  * Add input mask like phone number to all tel-input
  */
-const telSelector = document.querySelectorAll('.tel');
-const inputMask = new Inputmask('+38 (999) 999-99-99');
-telSelector.forEach(inp => inputMask.mask(inp));
+const phoneInput = document.querySelectorAll('input[type=tel]');
+
+phoneInput.forEach(inp => {
+  inp.addEventListener('input', function (e) {
+    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+  });
+});
 
 
 
+/**
+ * Send message after click on the button
+ */
 const orderButton = document.querySelectorAll('.form-order__button');
+orderButton.forEach(btn => {
+  btn.addEventListener('click', messageEvent)
+});
+
+
 
 // Show hidden menu of burger
 document.addEventListener('click', handlerMenu);
@@ -29,7 +46,7 @@ function handlerMenu(e) {
         console.log(targetItem);
         document.documentElement.classList.toggle('menu-open');
     }
-}
+};
 
 
 
@@ -75,11 +92,6 @@ flsFunctions.isWebp();
 
 
 
-orderButton.forEach(btn => {
-  console.log('+');
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    const formData = new FormData(e.target.closest('.form-order'));
-    console.log(Object.fromEntries( formData));
-  })
-});
+
+
+
