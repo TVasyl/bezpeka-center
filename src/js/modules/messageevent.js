@@ -39,22 +39,26 @@ export function messageEvent (e) {
  * @param {number} userPhone 
  */
 function sendMessage(userName, userPhone) {
-  fetch("http://localhost:3500", {
+  try {
+    fetch("http://localhost:3500", {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: JSON.stringify({'userName': userName, 'userPhone': userPhone})
-  })
-  .then((res) => res.json())
-  .then(data => {
-      // console.log(data);
-      if (data.ok) {
-          appComplited();
-          return true;
-      } else {
-          appFail(data.error_code);
-          console.log("Error from Telegram: " + data.description);
-      };
-  })
+      })
+    .then((res) => res.json())
+    .then(data => {
+        // console.log(data);
+        if (data.ok) {
+            appComplited();
+            return true;
+        } else {
+            appFail(data.error_code);
+            console.log("Error from Telegram: " + data.description);
+        };
+    })
+  } catch (error) {
+    console.log("no connect");
+  }  
 };
 
 
@@ -105,5 +109,5 @@ function appComplited() {
 * Method which show application fail
 */
 function appFail(errorCode) {
-  document.querySelector('.contant__text').innerHTML = `Вибачте, щось пішло не так, Вашу заявку відхилено ${errorCode}`;
+  document.querySelectorAll('form').forEach(form => form.innerHTML = `Вибачте, щось пішло не так, Вашу заявку відхилено ${errorCode}`)
 }

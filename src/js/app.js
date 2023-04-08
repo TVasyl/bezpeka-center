@@ -49,6 +49,17 @@ function handlerMenu(e) {
 };
 
 
+const buttonMenu = document.querySelectorAll('.menu__item');
+
+buttonMenu.forEach(tbn => {
+  tbn.addEventListener('click', () => {
+    if (document.documentElement.classList.contains('menu-open')) {
+      document.documentElement.classList.remove('menu-open');
+    };
+  })
+});
+
+
 
 // Sow form for feedback call //
 const callMeBtn = document.querySelector(".call-me");
