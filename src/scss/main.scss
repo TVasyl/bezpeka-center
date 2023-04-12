@@ -156,8 +156,10 @@
 
 }
 @media (max-width: 545.98px) {
+    .page {
+            padding-top: 70px;
+        }
     .main {
-        padding-top: 70px;
         &__container {
             img {
                 object-position: right;
@@ -178,8 +180,10 @@
     }
 }
 @media (max-width: 399.98px) {
+    .page {
+            padding-top: 70px;
+        }
     .main {
-        padding-top: 70px;
         &__container {
             img {
                 object-position: left;

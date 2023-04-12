@@ -458,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 545.98px) {
-  .main {
+  .page {
     padding-top: 70px;
   }
   .main__container img {
@@ -478,7 +478,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 399.98px) {
-  .main {
+  .page {
     padding-top: 70px;
   }
   .main__container img {
