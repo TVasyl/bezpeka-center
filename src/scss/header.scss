@@ -30,7 +30,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background:  url("@img/phone_icon.svg") 0 0 / 100% no-repeat;
+        background:  url("../img/phone_icon.svg") 0 0 / 100% no-repeat;
         width: 18px;
         height: 18px;
         display: block;
@@ -42,7 +42,7 @@
     }
 }
 .header-social__link img{
-    height: 25px;
+    height: 20px;
 }
 @media (max-width: 767.98px) {
     .contacts-header {
@@ -57,18 +57,19 @@
 
 /** --------- Logo and navigation --------- **/
 .header__container {
+    padding: 0 40px;
     background-color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $darckGrey;
 }
 .main-header {
     &__logo {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         img {
-            height: 60px;
+            height: 50px;
         }
     }
     &__navigation {
