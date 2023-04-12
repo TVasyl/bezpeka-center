@@ -7,6 +7,7 @@
 
 .page {
     flex: 1 1 auto;
+    padding-top: 98px; //padding for navbar
 }
 
 // Input form control
@@ -53,7 +54,6 @@
 /* Main ===========================================================================*/
 .main {
     position: relative;
-    padding-top: 98px; //padding for navbar
     
     &__container {
         
@@ -135,8 +135,11 @@
     // }
 }
 @media (max-width: 767.98px) {
-    .main {
+    .page {
         padding-top: 70px;
+    }
+    .main {
+        
         &__body {
             padding: 60px 40px 40px;
         }
