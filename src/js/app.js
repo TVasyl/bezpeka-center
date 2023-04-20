@@ -12,6 +12,24 @@ swiperVideo();
 brandSwiper();
 
 
+const menuItem = document.querySelectorAll('.menu__item');
+
+menuItem.forEach(item => item.addEventListener('click', menuHandler));
+
+function menuHandler() {
+  menuItem.forEach(item => item.classList.remove('_menu-active'));
+  if (!this.classList.contains('_menu-active')) {
+    this.classList.add('_menu-active')
+  } else {
+    this.classList.remove('_menu-active')
+  }
+
+  if (document.documentElement.classList.contains('menu-open')) {
+      document.documentElement.classList.remove('menu-open');
+    };
+};
+
+
 /**
  * Add input mask like phone number to all tel-input
  */
@@ -43,21 +61,21 @@ function handlerMenu(e) {
     const targetItem = e.target;
 
     if (targetItem.closest('.icon-menu')) {
-        console.log(targetItem);
+        // console.log(targetItem);
         document.documentElement.classList.toggle('menu-open');
     }
 };
 
 
-const buttonMenu = document.querySelectorAll('.menu__item');
+// const buttonMenu = document.querySelectorAll('.menu__item');
 
-buttonMenu.forEach(tbn => {
-  tbn.addEventListener('click', () => {
-    if (document.documentElement.classList.contains('menu-open')) {
-      document.documentElement.classList.remove('menu-open');
-    };
-  })
-});
+// buttonMenu.forEach(tbn => {
+//   tbn.addEventListener('click', () => {
+//     if (document.documentElement.classList.contains('menu-open')) {
+//       document.documentElement.classList.remove('menu-open');
+//     };
+//   })
+// });
 
 
 

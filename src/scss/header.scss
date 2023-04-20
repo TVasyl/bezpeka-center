@@ -106,6 +106,13 @@
     display: none;
 }
 
+._menu-active {
+    a {
+            color: $colorGreen;
+            // text-decoration: underline;
+        }
+}
+
  /* -----------------Burger menu with animation----------------- */
  @media (max-width: 767.98px) {    
     .header__container,

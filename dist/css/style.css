@@ -238,6 +238,10 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+._menu-active a {
+  color: #1AC2C2;
+}
+
 /* -----------------Burger menu with animation----------------- */
 @media (max-width: 767.98px) {
   .header__container,
