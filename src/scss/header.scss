@@ -5,15 +5,16 @@
     z-index: 100;
     
     &__contacts {
+        padding: 3px 40px;
         a{
             color: white;
         }
         background-color: black;
         color: white;
-        padding: 3px;
+        // padding: 3px;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 .contacts-header {
