@@ -1003,7 +1003,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Advantages ===========================================================================*/
 .advantages__container {
   padding: 100px 40px;
-  background-color: #2C3E4E;
+  background-color: rgba(44, 62, 78, 0.8901960784);
+  position: relative;
+  overflow: hidden;
+}
+.advantages__background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -5;
 }
 .advantages__title {
   color: #fff;
@@ -1017,7 +1028,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .advantages__body {
   display: flex;
-  gap: 32px;
+  gap: 60px;
   overflow: hidden;
 }
 .advantages__items {
@@ -1050,17 +1061,38 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 1.5;
 }
-.advantages__image {
+.advantages__clients {
   align-self: center;
+  height: 100%;
   flex: 0 0 38%;
-  overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transform: translate(100%, 0px);
   opacity: 0;
 }
-.advantages__image img {
-  max-width: 100%;
-  transform: scale(1.005);
+.advantages__clients .advantages__clients-items li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.advantages__clients .advantages__clients-item {
+  display: flex;
+  gap: 15px;
+  padding-left: 50px;
+  position: relative;
+}
+.advantages__clients .advantages__clients-item::before {
+  content: "";
+  background: url("../img/advantages/lock_protection-2.svg") 0 0/100% no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+}
+.advantages__clients .advantages__clients-image {
+  width: 100%;
+}
+.advantages__clients .text {
+  font-size: 18px;
+  color: #fff;
+  align-self: center;
 }
 
 .advantages__item._anime {
@@ -1069,7 +1101,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.8s ease 0s;
 }
 
-.advantages__image._anime {
+.advantages__clients._anime {
   transform: translate(0px, 0px);
   opacity: 1;
   transition: all 0.8s ease 0.3s;
@@ -1517,13 +1549,17 @@ not supported by any browser */
   background-color: #fff;
   text-align: center;
 }
+.brand__container h2 {
+  margin-bottom: 40px;
+}
 .brand__title {
   max-width: 900px;
   margin: 0 auto 60px;
   position: relative;
 }
-.brand__title h2 {
+.brand__title h3 {
   font-weight: 400;
+  font-size: 24px;
 }
 .brand__title::before {
   content: "";
@@ -1534,7 +1570,7 @@ not supported by any browser */
   width: 40%;
   background-color: #1AC2C2;
 }
-.brand__title h2 {
+.brand__title h3 {
   background-color: #2C3E4E;
   color: #fff;
   position: relative;
@@ -1567,7 +1603,7 @@ not supported by any browser */
   .brand__title {
     margin-bottom: 40px;
   }
-  .brand__title h2 {
+  .brand__title h3 {
     font-size: 24px;
   }
 }
