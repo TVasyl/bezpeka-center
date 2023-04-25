@@ -18,6 +18,7 @@ menuItem.forEach(item => item.addEventListener('click', menuHandler));
 
 function menuHandler() {
   menuItem.forEach(item => item.classList.remove('_menu-active'));
+  
   if (!this.classList.contains('_menu-active')) {
     this.classList.add('_menu-active')
   } else {
