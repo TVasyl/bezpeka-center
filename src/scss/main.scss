@@ -177,6 +177,12 @@
         &__title > h1 > span {
             margin-left: 0px;
         }
+        &__call-me {
+            width: 100%;
+            .call-me {
+            width: 100%;
+            }
+        }
     }
 }
 @media (max-width: 399.98px) {
@@ -719,6 +725,13 @@
     @media (max-width: 564px) {
         &__form {
             flex-direction: column;
+            width: 100%;
+        }
+        .control, .button {
+            height: 50px;
+            width: 100%;
+
+            font-size: 24px;
         }
     }
 }

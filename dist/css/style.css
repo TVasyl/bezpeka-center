@@ -485,6 +485,12 @@ h1, h2, h3, h4, h5, h6 {
   .main__title > h1 > span {
     margin-left: 0px;
   }
+  .main__call-me {
+    width: 100%;
+  }
+  .main__call-me .call-me {
+    width: 100%;
+  }
 }
 @media (max-width: 399.98px) {
   .page {
@@ -936,6 +942,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 564px) {
   .order-complex-solution__form {
     flex-direction: column;
+    width: 100%;
+  }
+  .order-complex-solution .control, .order-complex-solution .button {
+    height: 50px;
+    width: 100%;
+    font-size: 24px;
   }
 }
 
