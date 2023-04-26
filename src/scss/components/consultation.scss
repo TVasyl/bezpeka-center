@@ -1,0 +1,93 @@
+/* Consultation ===========================================================================*/
+.consultation {
+    &__container {
+        background-color: #fff;
+        padding: 100px 40px;
+        display: flex;
+        gap: 60px;
+    }
+
+    &__about {
+        text-align: center;
+        flex: 0 1 50%;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        background-color: $colorGreen;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    &__text .text {
+        margin: 0 auto;
+        max-width: 400px;
+        padding: 10px 20px;
+        background-color: $darckGrey;
+        position: relative;
+        top: 20px;
+        color: #fff;
+    }
+
+    &__form {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__control {
+        font-size: 24px;
+        margin-bottom: 22px;
+        height: 64px;
+        width: 348px;
+
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+    &__button {
+        height: 64px;
+        width: 348px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .consultation {
+        &__container {
+            padding: 70px 20px;
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .consultation {
+        &__container {
+            padding: 50px 20px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .consultation {
+        &__control {
+            width: 100%;
+        }
+
+        &__button {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}

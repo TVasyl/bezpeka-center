@@ -1,0 +1,151 @@
+/* Stages ===========================================================================*/
+.stages {
+    &__container {
+        padding: 100px 40px;
+        background-color: #fff;
+
+    }
+
+    &__work {
+        margin-bottom: 100px;
+
+        .stages__title {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 100px;
+
+            // z-index: 5px;
+
+            // max-width: 900px;
+            // margin: 0 auto 60px;
+            position: relative;
+
+            h2 {
+                position: relative;
+                font-weight: 400;
+                background-color: $darckGrey;
+                color: #fff;
+                padding: 10px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                height: 100%;
+                width: 100%;
+                background-color: $colorGreen;
+            }
+        }
+
+        .stages__items {
+            display: flex;
+            // flex-wrap: wrap;
+            counter-reset: ol-numbers;
+        }
+
+        .stages__item {
+            font-size: 18px;
+            border-top: 2px solid black;
+            padding-top: 40px;
+            // max-width: 320px;
+            padding-right: 5%;
+
+            position: relative;
+
+            &::before {
+                counter-increment: ol-numbers;
+                content: counter(ol-numbers);
+                position: absolute;
+                top: -15px;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 18px;
+                color: #fff;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $colorGreen;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .stages__logo img {
+            height: 80px;
+        }
+
+        .stages__links {
+            display: flex;
+            gap: 30px;
+            padding: 0 40px;
+        }
+    }
+
+    // &__logo {
+    //     img {
+    //         height: 130px;;
+    //     }
+    // }
+    // &__links {
+    //     display: flex;
+    //     gap: 30px;
+    //     padding: 0 40px;
+    // }
+}
+
+@media (max-width: 991.98px) {
+    .stages__container {
+        padding: 70px 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .stages {
+        &__container {
+            padding: 50px 30px;
+        }
+
+        &__work {
+            margin-bottom: 50px;
+
+            .stages__items {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .stages__item {
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+        }
+
+        &__social {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        &__logo {
+
+            // margin-bottom: 30px;
+            img {
+                height: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .stages__container {
+        padding: 50px 20px;
+    }
+}

@@ -1,0 +1,140 @@
+// ********** Solution about **********
+.solution-about {
+    &__container {
+        background-color: #fff;
+        padding: 90px 40px;
+        display: flex;
+        gap: 50px;
+    }
+
+    &__describe {
+        flex: 0 1 30%;
+        background-color: $colorGreen;
+        text-align: center;
+    }
+
+    &__contant {
+        position: relative;
+        padding: 20px;
+        background-color: $darckGrey;
+        color: #fff;
+        top: 20px;
+        left: 20px;
+    }
+
+    &__describe h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 40px;
+        line-height: 120%;
+    }
+
+    &__describe p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        /* 24/16 */
+
+    }
+}
+
+.complex-advantages {
+    flex: 0 1 70%;
+
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__item {
+        flex: 0 1 33.3%;
+    }
+
+    &__item-number {
+        color: $colorGreen;
+        height: 120px;
+        width: 120px;
+        border: 3px solid $colorGreen;
+        margin: 0 auto 20px;
+        font-size: 64px;
+        font-weight: 700;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: scale(0.3);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+    }
+
+    &__item-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        /* 24/16 */
+        text-align: center;
+    }
+}
+
+.complex-advantages__item-number._anime {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.8s ease 0s;
+}
+
+@media (max-width: 1100px) {
+    .solution-about {
+        &__container {
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    .solution-about__container {
+        padding: 70px 40px;
+    }
+
+    .complex-advantages {
+        &__items {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__item-text {
+            text-align: center;
+
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .solution-about {
+        &__container {
+            padding: 50px 20px;
+        }
+
+        &__describe {
+            margin-right: 20px;
+        }
+    }
+
+    .advantages {
+        flex-direction: column;
+
+        &__item-number {
+            height: 150px;
+            width: 150px;
+        }
+    }
+}

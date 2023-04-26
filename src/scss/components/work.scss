@@ -1,0 +1,79 @@
+/* Work ===========================================================================*/
+.work {
+    &__container {
+        padding: 90px 40px;
+        background-color: #fff;
+
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 370px;
+        background-color: $colorGreen;
+
+        h2 {
+            display: inline-block;
+            background-color: $darckGrey;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: 400;
+            position: relative;
+            top: -20px;
+        }
+    }
+
+    &__swiper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__item-slide {
+        text-align: center;
+    }
+
+    &__item-slide {
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $colorGreen;
+    }
+
+    .swiper-button-next::after {
+        color: $colorGreen;
+    }
+
+    .swiper-button-prev::after {
+        color: $colorGreen;
+    }
+
+    @media (max-width: 767.98px) {
+        .work__container {
+            padding: 70px 40px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 479.98px) {
+        .work {
+            &__container {
+                padding: 50px 20px;
+            }
+
+            &__text {
+                font-size: 36;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+// ********** Complex solution **********
+.complex-solution {
+    &__container {
+        position: relative;
+        background-color: #2c3e4ed3;
+        padding: 100px 40px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 100px;
+    }
+
+    &__text {
+        flex: 0 1 50%;
+        color: #fff;
+    }
+
+    &__advantages {
+        flex: 0 1 50%;
+    }
+
+    &_title {
+        margin-bottom: 60px;
+        color: #fff;
+
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 150%;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        // li:nth-child(1) {
+        //     margin-left: 0px;
+        // }
+        // li:nth-child(2) {
+        //     margin-left: 40px;
+        // }
+        // li:nth-child(3) {
+        //     margin-left: 80px;
+        // }
+        // li:nth-child(4) {
+        //     margin-left: 120px;
+        // }
+        li {
+            transform: translate(120%, 0px);
+            transition: all 0.3s ease 0s;
+
+            color: #fff;
+            position: relative;
+
+            padding-left: 60px;
+
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 120%;
+
+            &::before {
+                content: '';
+                background: url("../img/complex_solution/icon _check_.svg") 0 0 / 100% no-repeat;
+                position: absolute;
+                top: -13px;
+                left: 0;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    &__items._anime li {
+        transform: translate(0px, 0px);
+    }
+
+    &__items._anime li:nth-child(1) {
+        transition: all 0.8s ease 0s;
+    }
+
+    &__items._anime li:nth-child(2) {
+        transition: all 0.8s ease 0.2s;
+    }
+
+    &__items._anime li:nth-child(3) {
+        transition: all 0.8s ease 0.4s;
+    }
+
+    &__items._anime li:nth-child(4) {
+        transition: all 0.8s ease 0.6s;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .complex-solution {
+        &__container {
+            padding: 70px 30px;
+        }
+
+        &__body {
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        &__items {
+            gap: 60px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .complex-solution {
+        &__container {
+            padding: 70px 30px;
+
+        }
+
+        &_title {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .complex-solution {
+        &__container {
+            padding: 50px 20px;
+        }
+
+        &__items {
+            li:nth-child(1) {
+                margin-left: 0px;
+            }
+
+            li:nth-child(2) {
+                margin-left: 0px;
+            }
+
+            li:nth-child(3) {
+                margin-left: 0px;
+            }
+
+            li:nth-child(4) {
+                margin-left: 0px;
+            }
+
+            li {
+                padding-left: 40px;
+            }
+
+            li::before {
+                top: 0px;
+                left: 0;
+                height: 32px;
+                width: 32px;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+// .complex-solution__items {
+//     &._anime {
+//         li {
+//             transform: translate(0px, 0px);
+//             @for $var from 1 to 4 {
+//                 $delay: $var * 0.2;
+//                 &:nth-child(#{$var}) {
+//                     @if $var==1 {
+//                         transition: all 0.8s ease 0s;
+//                     } @else {
+//                         transition: all 0.58s ease #{deley + s};
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

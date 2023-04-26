@@ -4,51 +4,40 @@
 //Шлях до картинок має починатись з @img
 
 @import "styles_reset";
+
+@import "_global";
+@import '_varibles';
 @import "fonts";
-@import "header";
-@import "main";
-@import "security.example";
 
-@import "footer";
 
-@import 'varibles';
-
+// Swiper styles //
 @import "../../node_modules/swiper/swiper-bundle.css";
 // @import url('./styles_reset');
 
 
-body {
-    // background-color: #bad4f1;
-    // background-color: #1ac2c254;
-    background-color: #ebebeb;
-    color: $fontColorGrey;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    line-height: 150%;
-   
-    // background: url("@img/K5T4O2rcSkc.jpg") 0 0 no-repeat;
-}
+// Header //
+@import "header";
 
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: clip;
-    // scroll-behavior: smooth;
-    position: relative;
-}
 
-[class*="__container"]{ 
-    max-width: 1440px; 
-    margin: 0 auto; 
-    // padding: 0px 15px; 
-    // border-left: 1px solid #000;
-    // border-right: 1px solid #000;
-}
-
-.valid-error {
-    border: 2px solid red;
-}
+// Components //
+@import "main";
+@import "components/service";
+@import "components/complex.solution";
+@import "components/solution.about";
+@import "components/order.complex.solution";
+@import "components/work";
+@import "components/advantages";
+@import "components/stages";
+@import "components/testimonials";
+@import "components/consultation";
+@import "components/video";
+@import "components/brand";
 
 
 
+@import "security.example";
+
+
+
+// Footer //
+@import "footer";

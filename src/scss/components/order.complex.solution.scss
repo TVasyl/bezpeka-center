@@ -1,0 +1,64 @@
+/* Order comolex solution ===========================================================================*/
+.order-complex-solution {
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: $darckGrey;
+        color: #fff;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 110%;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        .input-phone {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .control {
+            height: 32px;
+
+        }
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    @media (max-width: 1100px) {
+        &__container {
+            flex-direction: column;
+
+        }
+    }
+
+    @media (max-width: 564px) {
+        &__form {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .control,
+        .button {
+            height: 50px;
+            width: 100%;
+
+            font-size: 24px;
+        }
+    }
+}
