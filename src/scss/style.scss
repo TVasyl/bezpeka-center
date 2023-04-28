@@ -12,16 +12,14 @@
 
 // Swiper styles //
 @import "../../node_modules/swiper/swiper-bundle.css";
-// @import url('./styles_reset');
 
 
 // Header //
 @import "header";
 
-
 // Components //
-@import "main";
-@import "components/service";
+@import "components/main";
+@import "components/services";
 @import "components/complex.solution";
 @import "components/solution.about";
 @import "components/order.complex.solution";
@@ -33,11 +31,8 @@
 @import "components/video";
 @import "components/brand";
 
-
-
+// Pages //
 @import "security.example";
-
-
 
 // Footer //
 @import "footer";

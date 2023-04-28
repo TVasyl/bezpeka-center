@@ -95,21 +95,32 @@ const callMeForm = document.querySelector(".page__feedback");
 const itemService = document.querySelector(".service__items");
 
 if (itemService) {
-  itemService.addEventListener("click", (e) => {
-  e.preventDefault();  
+    itemService.addEventListener("click", (e) => {
   
-  if (e.target.classList.contains("chevron")) {
-      e.target.closest('.item-service__about').classList.toggle("show-text");
-      e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
-    }
+        if (e.target.classList.contains("chevron")) {
+            e.target.closest('.item-service__about').classList.toggle("show-text");
+            e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
+        }
+    });
+};
+
+// const itemService = document.querySelector(".item-service__about");
+
+// if (itemService) {
+//   itemService.addEventListener("click", (e) => {
   
-      if (e.target.classList.contains("item-service__about")) {
-        e.target.closest('.item-service__about').classList.toggle("show-text");
-        e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
-      }
-    }
-  );
-}
+//     if (e.target.closest("item-service__about") || e.target.classList.contains("item-service__title") || e.target.classList.contains("item-service__text")) {
+//       e.target.closest('.item-service__about').classList.toggle("show-text");
+//       e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
+//     }
+  
+//       if (e.target.classList.contains("item-service__about")) {
+//         e.target.closest('.item-service__about').classList.toggle("show-text");
+//         e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
+//       }
+//     }
+//   );
+// }
 
 
 flsFunctions.isWebp();

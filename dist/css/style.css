@@ -645,6 +645,11 @@ body {
 
 .item-service {
   position: relative;
+  aspect-ratio: 4/3;
+}
+.item-service__image {
+  height: 100%;
+  width: 100%;
 }
 .item-service__image img {
   width: 100%;
