@@ -4,12 +4,51 @@ import * as flsFunctions from "./modules/functions.js";
 import {swiperService, swiperWork, swiperVideo, brandSwiper} from "./modules/swipers.js";
 import { animOnScroll } from "./modules/animations.js";
 import { messageEvent } from "./modules/messageevent.js";
+import { showExemple } from "./modules/video.exemple.js";
+import { createPopup } from "./modules/create.poup.js";
 
+
+const videoPlace = document.querySelector(".security-example");
+
+if (videoPlace) {
+  console.log('videoPlace');
+  videoPlace.addEventListener("click", showPopup)  
+};
+
+function showPopup(e) {
+  e.preventDefault();
+
+  if (e.target.closest('.item-security-example__image')) {
+    const element = e.target;
+    const src = element.getAttribute("src");
+
+    createPopup(src);
+
+    console.log(element.getAttribute("src"));
+  }
+};
 
 swiperService();
 swiperWork();
 swiperVideo();
 brandSwiper();
+
+// console.log(window.location);
+
+switch (window.location.pathname) {
+  case "/video-service.html":
+    showExemple('video');
+    break;
+  case "/protection-service.html":
+    showExemple('protection');
+    break;
+  default:
+    break;
+};
+// console.log(window.location.pathname);
+// if (videoPlace) {
+//   showVideoExemple();  
+// }
 
 
 const menuItem = document.querySelectorAll('.menu__item');

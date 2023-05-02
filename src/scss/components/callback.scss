@@ -1,0 +1,42 @@
+.callback {
+    background: url("../img/callback_telephone_icon.svg") 0 0 /100% no-repeat;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    // transform:scaleX(-1);
+    transform: rotate(-90deg);
+
+    transition: all 0.5s;
+
+    animation-name: callback-rotate;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: scale(1.1);
+        // transition: all 0.5s;
+        animation-play-state:paused;
+
+    }
+
+}
+
+@keyframes callback-rotate {
+    0%{
+        transform: rotate(-90deg);
+    }
+    25%{
+        transform: rotate(-120deg);
+    }
+    50%{
+        transform: rotate(-60deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+}
