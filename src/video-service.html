@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('html/head.html', {
-        "title": "Відеонагляд"
-    })
+    @@include('html/head.html', { "title": "Відеонагляд" })
     <body>
         <div class="wrapper">
-            @@include('html/header.html', {
-                "url": "http://localhost:3000"
-            })
+            @@include('html/header.html', { "url": "http://localhost:3000" })
             <main class="page">
                 @@include('html/pages/security.example.html', {})
                 @@include('html/components/order.solution.html', {})
@@ -15,8 +11,7 @@
             </main>
             @@include('html/components/callback.html', {})
             @@include('html/popups/popup.image.html')
-            
-            @@include('html/footer.html', {}) 
+            @@include('html/footer.html', {})
         </div>
         <script src="js/app.min.js"></script>
     </body>

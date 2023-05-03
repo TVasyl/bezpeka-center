@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('html/head.html', { "title": "Адмін панель" })
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="admin__container">
+                <div class="admin__logo">
+                    <a href="http://localhost:3000">
+                        <img src="@img/bc_logo.svg" alt="logo" />
+                    </a>
+                </div>
+                <form action="#" class="admin__form">
+                    <input
+                        class="admin__login control"
+                        type="text"
+                        name="login"
+                        placeholder="LOGIN"
+                    />
+                    <input
+                        class="admin__password control"
+                        type="password"
+                        name="password"
+                        placeholder="PASSWORD"
+                    />
+                    <button type="submit" class="form-order__button button">
+                        LOG IN
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

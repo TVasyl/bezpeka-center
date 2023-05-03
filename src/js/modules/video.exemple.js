@@ -2,30 +2,28 @@
 import videoExempleData from "../video.data.json";
 import protectionExempleData from "../protection.data.json";
 
-
-
 const itemPlace = document.querySelector(".security-example__items");
 
 export function showExemple(db) {
     let data = [];
 
     switch (db) {
-        case 'video':
+        case "video":
             data = videoExempleData ? videoExempleData : false;
             break;
-        case 'protection':
-            data = protectionExempleData ? protectionExempleData : false;    
+        case "protection":
+            data = protectionExempleData ? protectionExempleData : false;
         default:
             break;
     }
 
-    data.map(data => {
+    data.map((data) => {
         data ? creareItem(data) : render("error");
     });
-};
+}
 
 function creareItem({ id, img, title, cost }) {
-    let item = document.createElement('div');
+    let item = document.createElement("div");
 
     item.innerHTML = `<div id="${id}" class="security-example__item item-security-example">
                 <div class="item-security-example__image">
@@ -46,14 +44,11 @@ function creareItem({ id, img, title, cost }) {
                     </div>
                 </div>
                 <button class="item-security-example__button button">Консультація</button>
-            </div>`
-    
+            </div>`;
+
     render(item);
-};
-
-
-
+}
 
 function render(item) {
     itemPlace.append(item);
-};
+}
