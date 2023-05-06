@@ -12,6 +12,20 @@ import { messageEvent } from "./modules/messageevent.js";
 import { showExemple } from "./modules/video.exemple.js";
 import { createPopup } from "./modules/create.poup.js";
 
+/**
+ * Switch for randerig items in different pages
+ */
+switch (window.location.pathname) {
+    case "/video-service.html":
+        showExemple("video");
+        break;
+    case "/protection-service.html":
+        showExemple("protection");
+        break;
+    default:
+        break;
+}
+
 const renderedPlace = document.querySelector(".security-example");
 
 if (renderedPlace) {
@@ -35,22 +49,17 @@ function showPopup(e) {
     }
 }
 
+/**
+ * Functions for setup swipers
+ */
 swiperService();
 swiperWork();
 swiperVideo();
 brandSwiper();
 
-switch (window.location.pathname) {
-    case "/bezpeka-center/video-service.html":
-        showExemple("video");
-        break;
-    case "/bezpeka-center/protection-service.html":
-        showExemple("protection");
-        break;
-    default:
-        break;
-}
-
+/**
+ *Code for change style of active menu and open burger menu
+ */
 const menuItem = document.querySelectorAll(".menu__item");
 
 menuItem.forEach((item) => item.addEventListener("click", menuHandler));
@@ -66,6 +75,17 @@ function menuHandler() {
 
     if (document.documentElement.classList.contains("menu-open")) {
         document.documentElement.classList.remove("menu-open");
+    }
+}
+
+// Show hidden menu of burger
+document.addEventListener("click", handlerMenu);
+
+function handlerMenu(e) {
+    const targetItem = e.target;
+
+    if (targetItem.closest(".icon-menu")) {
+        document.documentElement.classList.toggle("menu-open");
     }
 }
 
@@ -93,27 +113,6 @@ orderButton.forEach((btn) => {
     btn.addEventListener("click", messageEvent);
 });
 
-// Show hidden menu of burger
-document.addEventListener("click", handlerMenu);
-
-function handlerMenu(e) {
-    const targetItem = e.target;
-
-    if (targetItem.closest(".icon-menu")) {
-        document.documentElement.classList.toggle("menu-open");
-    }
-}
-
-// const buttonMenu = document.querySelectorAll('.menu__item');
-
-// buttonMenu.forEach(tbn => {
-//   tbn.addEventListener('click', () => {
-//     if (document.documentElement.classList.contains('menu-open')) {
-//       document.documentElement.classList.remove('menu-open');
-//     };
-//   })
-// });
-
 // Sow form for feedback call //
 const callMeBtn = document.querySelector(".call-me");
 const callMeForm = document.querySelector(".page__feedback");
@@ -140,24 +139,6 @@ if (itemService) {
         }
     });
 }
-
-// const itemService = document.querySelector(".item-service__about");
-
-// if (itemService) {
-//   itemService.addEventListener("click", (e) => {
-
-//     if (e.target.closest("item-service__about") || e.target.classList.contains("item-service__title") || e.target.classList.contains("item-service__text")) {
-//       e.target.closest('.item-service__about').classList.toggle("show-text");
-//       e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
-//     }
-
-//       if (e.target.classList.contains("item-service__about")) {
-//         e.target.closest('.item-service__about').classList.toggle("show-text");
-//         e.target.closest(".item-service__open").classList.toggle("chevron_rotate");
-//       }
-//     }
-//   );
-// }
 
 flsFunctions.isWebp();
 
