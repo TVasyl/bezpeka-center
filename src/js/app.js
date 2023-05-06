@@ -18,6 +18,10 @@ if (renderedPlace) {
     renderedPlace.addEventListener("click", showPopup);
 }
 
+/**
+ * Function for show popup from items of service example
+ * @param {event} e
+ */
 function showPopup(e) {
     e.preventDefault();
 
@@ -36,7 +40,6 @@ swiperWork();
 swiperVideo();
 brandSwiper();
 
-
 switch (window.location.pathname) {
     case "/video-service.html":
         showExemple("video");
@@ -47,10 +50,6 @@ switch (window.location.pathname) {
     default:
         break;
 }
-// console.log(window.location.pathname);
-// if (renderedPlace) {
-//   showVideoExemple();
-// }
 
 const menuItem = document.querySelectorAll(".menu__item");
 
@@ -101,7 +100,6 @@ function handlerMenu(e) {
     const targetItem = e.target;
 
     if (targetItem.closest(".icon-menu")) {
-        // console.log(targetItem);
         document.documentElement.classList.toggle("menu-open");
     }
 }
@@ -120,9 +118,10 @@ function handlerMenu(e) {
 const callMeBtn = document.querySelector(".call-me");
 const callMeForm = document.querySelector(".page__feedback");
 
-// callMeBtn.addEventListener("click", () => {
-//   callMeForm.classList.toggle("show-form");
-// });
+callMeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    callMeForm.classList.toggle("show-form");
+});
 
 // Show text on the service items //
 const itemService = document.querySelector(".service__items");

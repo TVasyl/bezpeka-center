@@ -1,55 +1,55 @@
 [
     {
         "id": "01",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 7000
     },
     {
         "id": "02",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 9000
     },
     {
         "id": "03",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 25000
     },
     {
         "id": "04",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 7000
     },
     {
         "id": "05",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 15000
     },
     {
         "id": "06",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 15600
     },
     {
         "id": "07",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 12000
     },
     {
         "id": "08",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 6000
     },
     {
         "id": "09",
-        "img": "https://cdn.secur.ua/media/catalog/product/cache/7/small_image/215x/9df78eab33525d08d6e5fb8d27136e95/_/_/_._._4__1.jpg",
+        "img": "img/video_service/example-1.jpg",
         "title": "Охоронна система для 1-кімнатної квартири на першому поверсі",
         "cost": 23500
     }
