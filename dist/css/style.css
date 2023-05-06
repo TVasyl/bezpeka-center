@@ -1944,12 +1944,16 @@ body {
 }
 .nav-footer__title {
   margin: 20px 0;
+  text-transform: uppercase;
 }
 .nav-footer__list {
   margin-bottom: 30px;
 }
 .nav-footer__link {
   margin-bottom: 20px;
+}
+.nav-footer__link a {
+  color: #fff;
 }
 
 .footer-social {

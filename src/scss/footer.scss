@@ -4,7 +4,6 @@
     &__container {
         padding: 40px;
         background-color: $darckGrey;
-
     }
     &__body {
         display: flex;
@@ -77,20 +76,23 @@
         bottom: 3px;
         left: -40px;
     }
-
 }
 
 .nav-footer {
-   color: #fff;
-   &__title {
-    margin: 20px 0;
-   }
-   &__list {
-    margin-bottom: 30px;
-   }
-   &__link {
-    margin-bottom: 20px;
-   }
+    color: #fff;
+    &__title {
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+    &__list {
+        margin-bottom: 30px;
+    }
+    &__link {
+        margin-bottom: 20px;
+        a {
+            color: #fff;
+        }
+    }
 }
 
 .footer-social {
@@ -112,7 +114,8 @@
         justify-content: center;
         align-items: center;
     }
-    &__control, &__button {
+    &__control,
+    &__button {
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 20px;
@@ -132,7 +135,8 @@
         padding: 20px;
     }
     .feedback-footer {
-        &__control, &__button {
+        &__control,
+        &__button {
             font-size: 20px;
             padding: 10px;
             width: 100%;

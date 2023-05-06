@@ -12,11 +12,10 @@ import { messageEvent } from "./modules/messageevent.js";
 import { showExemple } from "./modules/video.exemple.js";
 import { createPopup } from "./modules/create.poup.js";
 
-const videoPlace = document.querySelector(".security-example");
+const renderedPlace = document.querySelector(".security-example");
 
-if (videoPlace) {
-    console.log("videoPlace");
-    videoPlace.addEventListener("click", showPopup);
+if (renderedPlace) {
+    renderedPlace.addEventListener("click", showPopup);
 }
 
 function showPopup(e) {
@@ -37,7 +36,6 @@ swiperWork();
 swiperVideo();
 brandSwiper();
 
-// console.log(window.location);
 
 switch (window.location.pathname) {
     case "/video-service.html":
@@ -50,7 +48,7 @@ switch (window.location.pathname) {
         break;
 }
 // console.log(window.location.pathname);
-// if (videoPlace) {
+// if (renderedPlace) {
 //   showVideoExemple();
 // }
 
