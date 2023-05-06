@@ -41,10 +41,10 @@ swiperVideo();
 brandSwiper();
 
 switch (window.location.pathname) {
-    case "/video-service.html":
+    case "bezpeka-center/video-service.html":
         showExemple("video");
         break;
-    case "/protection-service.html":
+    case "bezpeka-center/protection-service.html":
         showExemple("protection");
         break;
     default:
