@@ -41,10 +41,10 @@ swiperVideo();
 brandSwiper();
 
 switch (window.location.pathname) {
-    case "bezpeka-center/video-service.html":
+    case "/bezpeka-center/video-service.html":
         showExemple("video");
         break;
-    case "bezpeka-center/protection-service.html":
+    case "/bezpeka-center/protection-service.html":
         showExemple("protection");
         break;
     default:
@@ -118,10 +118,12 @@ function handlerMenu(e) {
 const callMeBtn = document.querySelector(".call-me");
 const callMeForm = document.querySelector(".page__feedback");
 
-callMeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    callMeForm.classList.toggle("show-form");
-});
+if (callMeBtn) {
+    callMeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        callMeForm.classList.toggle("show-form");
+    });
+}
 
 // Show text on the service items //
 const itemService = document.querySelector(".service__items");
