@@ -5,7 +5,7 @@ body {
     // background-color: #1ac2c254;
     background-color: #ebebeb;
     color: $fontColorGrey;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     line-height: 150%;
 
@@ -24,13 +24,9 @@ body {
 [class*="__container"] {
     max-width: 1440px;
     margin: 0 auto;
-    // padding: 0px 15px; 
+    // padding: 0px 15px;
     // border-left: 1px solid #000;
     // border-right: 1px solid #000;
-}
-
-.valid-error {
-    border: 2px solid red;
 }
 
 .page {
@@ -42,8 +38,8 @@ body {
 .control {
     font-weight: 500;
     padding: 5px 10px;
-    background-color: #D9D9D9;
-    border: 2px solid #D9D9D9;
+    background-color: #d9d9d9;
+    border: 2px solid #d9d9d9;
 }
 
 .title {
@@ -84,3 +80,6 @@ body {
     opacity: 0;
 }
 
+.valid-error {
+    border: 2px solid red;
+}

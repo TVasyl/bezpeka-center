@@ -9,24 +9,43 @@ import {
 } from "./modules/swipers.js";
 import { animOnScroll } from "./modules/animations.js";
 import { messageEvent } from "./modules/messageevent.js";
-import { showExemple } from "./modules/video.exemple.js";
+import { showExemple } from "./modules/show.example.app.js";
 import { createPopup } from "./modules/create.poup.js";
 
 /**
  * Switch for randerig items in different pages
  */
 switch (window.location.pathname) {
-    case "/video-service.html":
-        showExemple("video");
+    // case "/":
+    //TODO:Створити функцію showMain яка буде подавати запит на сервер для отримання даних щоб відрендерити блоки: наші роботи, наші відео, та блок відгуки
+    // showMain("main");
+    // break;
+    case "/video-surveillance.html":
+        showExemple("video-surveillance");
         break;
-    case "/protection-service.html":
-        showExemple("protection");
+    case "/security-system.html":
+        showExemple("security-system");
+        break;
+    case "/imtercom.html":
+        showExemple("imtercom");
+        break;
+    case "/gate-automation.html":
+        showExemple("gate-automation");
+        break;
+    case "/access-control.html":
+        showExemple("access-control");
+        break;
+    case "/fire-alarm.html":
+        showExemple("fire-alarm");
+        break;
+    case "/smart-home.html":
+        showExemple("smart-home");
         break;
     default:
         break;
 }
 
-const renderedPlace = document.querySelector(".security-example");
+const renderedPlace = document.querySelector(".app-security");
 
 if (renderedPlace) {
     renderedPlace.addEventListener("click", showPopup);
@@ -39,7 +58,7 @@ if (renderedPlace) {
 function showPopup(e) {
     e.preventDefault();
 
-    if (e.target.closest(".item-security-example__image")) {
+    if (e.target.closest(".item-app__image")) {
         const element = e.target;
         const src = element.getAttribute("src");
 

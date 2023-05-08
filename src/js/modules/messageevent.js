@@ -1,11 +1,13 @@
 export function messageEvent(e) {
     e.preventDefault();
+    // console.log("btn work");
 
     const formData = new FormData(e.target.closest(".form-order"));
     const nameSelector = e.target.closest(".form-order").children.name;
     const phoneSelector = e.target.closest(".form-order").children.phone;
 
     const { name, phone } = Object.fromEntries(formData);
+    console.log("name: " + name);
 
     let nameValidate;
     let phoneValidate;
@@ -70,7 +72,9 @@ function sendMessage(userName, userPhone) {
  * @returns {boolean}
  */
 function userNameValidate(name, element) {
+    console.log("name valid ok");
     if (name.length < 3) {
+        console.log(element);
         element.classList.add("valid-error");
         name = false;
     } else {

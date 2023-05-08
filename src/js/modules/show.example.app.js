@@ -114,48 +114,66 @@ const protectionExempleData = [
     },
 ];
 
-const itemPlace = document.querySelector(".security-example__items");
+const itemPlace = document.querySelector(".app-items");
 
 export function showExemple(db) {
     let data = [];
 
     switch (db) {
-        case "video":
+        case "video-surveillance":
             data = videoExempleData ? videoExempleData : false;
             break;
-        case "protection":
+        case "security-system":
             data = protectionExempleData ? protectionExempleData : false;
+            break;
+        case "imtercom":
+            data = protectionExempleData ? protectionExempleData : false;
+            break;
+        case "gate-automation":
+            data = protectionExempleData ? protectionExempleData : false;
+            break;
+        case "access-control":
+            data = protectionExempleData ? protectionExempleData : false;
+            break;
+        case "fire-alarm":
+            data = protectionExempleData ? protectionExempleData : false;
+            break;
+        case "smart-home":
+            data = protectionExempleData ? protectionExempleData : false;
+            break;
         default:
             break;
     }
 
     data.map((data) => {
-        data ? creareItem(data) : render("error");
+        data ? createItem(data) : render("error");
     });
 }
 
-function creareItem({ id, img, title, cost }) {
+function createItem({ id, img, title, cost }) {
     let item = document.createElement("div");
+    // item.classList.add("app-items");
+    const mainClass = "item-app";
 
-    item.innerHTML = `<div id="${id}" class="security-example__item item-security-example">
-                <div class="item-security-example__image">
+    item.innerHTML = `<div id="${id}" class="app-items__item ${mainClass}">
+                <div class="${mainClass}__image">
                     <a href="${img}">
                         <img src="${img}" alt="plan title="Приклад базової моделі відеоспостереження"">
                     </a>
                 </div>
-                <div class="item-security-example__title">
+                <div class="${mainClass}__title">
                     <p>${title}</p>
                 </div>
-                <div class="item-security-example__price">
+                <div class="${mainClass}__price">
                     <span class="lable-price">Від:</span>
-                    <div class="item-security-example__price-box">
+                    <div class="${mainClass}__price-box">
                         <span class="price">
                             <span class="price-value">${cost}</span>
                             <span class="price-symbol">грн</span>
                         </span>
                     </div>
                 </div>
-                <button class="item-security-example__button button">Консультація</button>
+                <button class="${mainClass}__button button">Консультація</button>
             </div>`;
 
     render(item);
