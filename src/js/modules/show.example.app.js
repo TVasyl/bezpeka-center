@@ -122,11 +122,23 @@ export function showExemple(db) {
     switch (db) {
         case "video-surveillance":
             data = videoExempleData ? videoExempleData : false;
+            // fetch(url, {
+            //     method: "POST",
+            //     mode: "cors",
+            //     cache: "no-cache",
+            //     credentials: "same-origin",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     redirect: "follow",
+            //     referrerPolicy: "no-referrer",
+            //     body: db
+            // });
             break;
         case "security-system":
             data = protectionExempleData ? protectionExempleData : false;
             break;
-        case "imtercom":
+        case "intercom":
             data = protectionExempleData ? protectionExempleData : false;
             break;
         case "gate-automation":

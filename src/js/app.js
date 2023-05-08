@@ -26,8 +26,8 @@ switch (window.location.pathname) {
     case "/security-system.html":
         showExemple("security-system");
         break;
-    case "/imtercom.html":
-        showExemple("imtercom");
+    case "/intercom.html":
+        showExemple("intercom");
         break;
     case "/gate-automation.html":
         showExemple("gate-automation");
