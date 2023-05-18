@@ -14,28 +14,114 @@
     <body>
         <div class="wrapper">
             <div class="admin__container">
-                <div class="admin__logo">
-                    <a href="http://localhost:3000">
-                        <img src="img/bc_logo.svg" alt="logo" />
-                    </a>
+                <aside class="admin__navigation">
+                    <div class="admin__logo">
+                        <a href="http://localhost:3000">
+                            <img src="img/bc_logo.svg" alt="logo" />
+                        </a>
+                    </div>
+                    <ul class="admin__nav-list">
+                        <li class="admin__nav-item">
+                            <a href="#">Домашня сторінка</a>
+                        </li>
+                        <li class="admin__nav-item _active-nav-admin">
+                            <a href="#">Відеонагляд</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <a href="#">Охоронна сигналізація</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <a href="#">Домофонія</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <a href="#">Автоматика воріт</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <a href="#">Контроль доступу</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <a href="#">Пожежна сигналізація</a>
+                        </li>
+                        <li class="admin__nav-item">
+                            <a href="#">Розумний дім</a>
+                        </li>
+                    </ul>
+                </aside>
+                <div class="admin__app-admin app-admin">
+                    <!-- Application for admin panel -->
+                    <!-- <div class="app-admin__auth">
+                        <div class="app-admin__logo">
+                            <a href="http://localhost:3000">
+                                <img src="img/bc_logo.svg" alt="logo" />
+                            </a>
+                        </div>
+                        <form action="#" class="app-admin__form login-form">
+                            <input
+                                class="app-admin__login control"
+                                type="text"
+                                name="login"
+                                placeholder="LOGIN"
+                            />
+                            <input
+                                class="app-admin__password control"
+                                type="password"
+                                name="password"
+                                placeholder="PASSWORD"
+                            />
+                            <button
+                                type="submit"
+                                class="form-order__button button"
+                            >
+                                LOG IN
+                            </button>
+                        </form>
+                    </div> -->
+                    <div class="app-admin__content">
+                        <div class="app-security__container app-items">
+                            <div>
+                                <div
+                                    id="${id}"
+                                    class="app-items__item item-app"
+                                    width="400px"
+                                >
+                                    <div class="item-app__image">
+                                        <a
+                                            href="img/video_service/example-1.jpg"
+                                        >
+                                            <img
+                                                src="img/video_service/example-1.jpg"
+                                                alt="plan"
+                                                title="Приклад базової моделі відеоспостереження"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="item-app__title">
+                                        <p>
+                                            Відеонагляд для 1-кімнатної квартири
+                                            на першому поверсі
+                                        </p>
+                                    </div>
+                                    <div class="item-app__price">
+                                        <span class="lable-price">Від:</span>
+                                        <div class="item-app__price-box">
+                                            <span class="price">
+                                                <span class="price-value"
+                                                    >7000</span
+                                                >
+                                                <span class="price-symbol"
+                                                    >грн</span
+                                                >
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button class="item-app__button button">
+                                        Редагувати
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <form action="#" class="admin__form">
-                    <input
-                        class="admin__login control"
-                        type="text"
-                        name="login"
-                        placeholder="LOGIN"
-                    />
-                    <input
-                        class="admin__password control"
-                        type="password"
-                        name="password"
-                        placeholder="PASSWORD"
-                    />
-                    <button type="submit" class="form-order__button button">
-                        LOG IN
-                    </button>
-                </form>
             </div>
         </div>
         <script src="js/app.min.js"></script>

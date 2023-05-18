@@ -170,7 +170,7 @@ function createItem({ id, img, title, cost }) {
     item.innerHTML = `<div id="${id}" class="app-items__item ${mainClass}">
                 <div class="${mainClass}__image">
                     <a href="${img}">
-                        <img src="${img}" alt="plan title="Приклад базової моделі відеоспостереження"">
+                        <img src="${img}" alt="plan" title="Приклад базової моделі відеоспостереження">
                     </a>
                 </div>
                 <div class="${mainClass}__title">

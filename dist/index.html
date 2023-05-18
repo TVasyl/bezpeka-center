@@ -48,18 +48,35 @@
             <nav class="menu__body">
                 <ul class="menu__list">
                     <li class="menu__item _menu-active">
-                        <a href="http://localhost:3000/#main">Home</a>
+                        <!-- <a data-goto=".main" href="http://localhost:3000/#main">Home</a> -->
+                        <a class="menu__link" data-goto=".main" href="#"
+                            >Home</a
+                        >
                     </li>
                     <li class="menu__item">
-                        <a href="http://localhost:3000/#service">Сервіс</a>
+                        <!-- <a href="http://localhost:3000/#service">Сервіс</a> -->
+                        <a class="menu__link" data-goto=".service" href="#"
+                            >Наші послуги</a
+                        >
                     </li>
                     <li class="menu__item">
-                        <a href="http://localhost:3000/#work">Фото робіт</a>
+                        <!-- <a href="http://localhost:3000/#work">Фото робіт</a> -->
+                        <a class="menu__link" data-goto=".work" href="#"
+                            >Фото робіт</a
+                        >
                     </li>
                     <li class="menu__item">
-                        <a href="http://localhost:3000/#testimonials">Відгуки</a>
+                        <!-- <a href="http://localhost:3000/#testimonials">Відгуки</a> -->
+                        <a class="menu__link" data-goto=".testimonials" href="#"
+                            >Відгуки</a
+                        >
                     </li>
-                    <li class="menu__item"><a href="http://localhost:3000/#video">Відео</a></li>
+                    <li class="menu__item">
+                        <!-- <a href="http://localhost:3000/#video">Відео</a> -->
+                        <a class="menu__link" data-goto=".video" href="#"
+                            >Відео</a
+                        >
+                    </li>
                 </ul>
             </nav>
         </nav>
@@ -128,7 +145,7 @@
 </section>
 
                 <!-- ********** Service ********** -->
-<section class="page__service service" id="service">
+<section class="page__service service" id="service" da>
     <div class="service__container">
         <div class="service__title">
             <h2 class="title">Наші послуги</h2>
