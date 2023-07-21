@@ -69,22 +69,34 @@
     display: flex;
     flex-direction: column;
 
-    &:hover {
-        transform: scale(1.03);
-        transition: 0.5s ease 0s;
-    }
+    // &:hover {
+    //     transform: scale(1.03);
+    //     transition: 0.5s ease 0s;
+    // }
     &__image {
         img {
             aspect-ratio: 1/1;
             width: 100%;
         }
     }
-    &__title {
+    &__body {
         margin: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__name {
+        // margin: 0 10px;
+        font-size: 18px;
+        color: black;
+        font-weight: 600;
+    }
+    &__description {
+        // margin: 10px;
         flex: 1 1 auto;
     }
     &__price {
-        margin: 10px;
+        // margin: 10px;
         display: flex;
         font-size: 24px;
         font-weight: 600;

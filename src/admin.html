@@ -14,28 +14,65 @@
                     </div>
                     <ul class="admin__nav-list">
                         <li class="admin__nav-item">
-                            <a href="#">Домашня сторінка</a>
+                            <a class="admin_link" data-adminlink="main" href="#"
+                                >Домашня сторінка</a
+                            >
                         </li>
                         <li class="admin__nav-item _active-nav-admin">
-                            <a href="#">Відеонагляд</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="video-surveillance"
+                                href="#"
+                                >Відеонагляд</a
+                            >
                         </li>
                         <li class="admin__nav-item">
-                            <a href="#">Охоронна сигналізація</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="security-system"
+                                href="#"
+                                >Охоронна сигналізація</a
+                            >
                         </li>
                         <li class="admin__nav-item">
-                            <a href="#">Домофонія</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="intercom"
+                                href="#"
+                                >Домофонія</a
+                            >
                         </li>
                         <li class="admin__nav-item">
-                            <a href="#">Автоматика воріт</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="gate-automation"
+                                href="#"
+                                >Автоматика воріт</a
+                            >
                         </li>
                         <li class="admin__nav-item">
-                            <a href="#">Контроль доступу</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="access-control"
+                                href="#"
+                                >Контроль доступу</a
+                            >
                         </li>
                         <li class="admin__nav-item">
-                            <a href="#">Пожежна сигналізація</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="fire-alarm"
+                                href="#"
+                                >Пожежна сигналізація</a
+                            >
                         </li>
                         <li class="admin__nav-item">
-                            <a href="#">Розумний дім</a>
+                            <a
+                                class="admin_link"
+                                data-adminlink="smart-home"
+                                href="#"
+                                >Розумний дім</a
+                            >
                         </li>
                     </ul>
                 </aside>
@@ -69,7 +106,9 @@
                         </form>
                     </div> -->
                     <div class="app-admin__content">
-                        <div class="app-security__container app-items">
+                        <div
+                            class="app-security__container app-items admin__app-items"
+                        >
                             <div>
                                 <div
                                     id="${id}"

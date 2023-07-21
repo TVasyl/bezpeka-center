@@ -1,168 +1,57 @@
-// import { videoExempleData } from "../data";
-// import videoExempleData from "../video.data.json";
-// import protectionExempleData from "../protection.data.json";
-const videoExempleData = [
-    {
-        id: "01",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 1-кімнатної квартири на першому поверсі",
-        cost: 7000,
-    },
-    {
-        id: "02",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 2-кімнатної квартири на першому поверсі",
-        cost: 9000,
-    },
-    {
-        id: "03",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 3-кімнатної квартири на першому поверсі",
-        cost: 25000,
-    },
-    {
-        id: "04",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 4-кімнатної квартири на першому поверсі",
-        cost: 7000,
-    },
-    {
-        id: "05",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 1-кімнатної квартири на першому поверсі",
-        cost: 15000,
-    },
-    {
-        id: "06",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 2-кімнатної квартири на першому поверсі",
-        cost: 15600,
-    },
-    {
-        id: "07",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 3-кімнатної квартири на першому поверсі",
-        cost: 12000,
-    },
-    {
-        id: "08",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 4-кімнатної квартири на першому поверсі",
-        cost: 6000,
-    },
-    {
-        id: "09",
-        img: "img/video_service/example-1.jpg",
-        title: "Відеонагляд для 1-кімнатної квартири на першому поверсі",
-        cost: 23500,
-    },
-];
-const protectionExempleData = [
-    {
-        id: "01",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 7000,
-    },
-    {
-        id: "02",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 9000,
-    },
-    {
-        id: "03",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 25000,
-    },
-    {
-        id: "04",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 7000,
-    },
-    {
-        id: "05",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 15000,
-    },
-    {
-        id: "06",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 15600,
-    },
-    {
-        id: "07",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 12000,
-    },
-    {
-        id: "08",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 6000,
-    },
-    {
-        id: "09",
-        img: "img/video_service/example-1.jpg",
-        title: "Охоронна система для 1-кімнатної квартири на першому поверсі",
-        cost: 23500,
-    },
-];
+// import { urls } from "./configs";
 
-const itemPlace = document.querySelector(".app-items");
+export function showExemple(endpoint, itemPlace) {
+    // let goods = [];
+    itemPlace = document.querySelector(itemPlace);
+    itemPlace.innerHTML = "";
 
-export function showExemple(db) {
-    let data = [];
+    const getGoods = async (category) => {
+        let response = await fetch(
+            `https://bezpekaapi.onrender.com/technology?category=${category}`
+        );
 
-    switch (db) {
+        const data = await response.json();
+
+        render(data);
+    };
+
+    switch (endpoint) {
         case "video-surveillance":
-            data = videoExempleData ? videoExempleData : false;
-            // fetch(url, {
-            //     method: "POST",
-            //     mode: "cors",
-            //     cache: "no-cache",
-            //     credentials: "same-origin",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     redirect: "follow",
-            //     referrerPolicy: "no-referrer",
-            //     body: db
-            // });
+            getGoods(endpoint);
             break;
         case "security-system":
-            data = protectionExempleData ? protectionExempleData : false;
+            getGoods(endpoint);
             break;
         case "intercom":
-            data = protectionExempleData ? protectionExempleData : false;
+            getGoods(endpoint);
             break;
         case "gate-automation":
-            data = protectionExempleData ? protectionExempleData : false;
+            getGoods(endpoint);
             break;
         case "access-control":
-            data = protectionExempleData ? protectionExempleData : false;
+            getGoods(endpoint);
             break;
         case "fire-alarm":
-            data = protectionExempleData ? protectionExempleData : false;
+            getGoods(endpoint);
             break;
         case "smart-home":
-            data = protectionExempleData ? protectionExempleData : false;
+            getGoods(endpoint);
             break;
         default:
             break;
     }
 
-    data.map((data) => {
-        data ? createItem(data) : render("error");
-    });
+    function render(data) {
+        if (data) {
+            data.map((item) => {
+                let rendererItem = item ? createItem(item) : render("error");
+                itemPlace.append(rendererItem);
+            });
+        }
+    }
 }
 
-function createItem({ id, img, title, cost }) {
+function createItem({ id, img, name, description, cost }) {
     let item = document.createElement("div");
     // item.classList.add("app-items");
     const mainClass = "item-app";
@@ -173,24 +62,24 @@ function createItem({ id, img, title, cost }) {
                         <img src="${img}" alt="plan" title="Приклад базової моделі відеоспостереження">
                     </a>
                 </div>
-                <div class="${mainClass}__title">
-                    <p>${title}</p>
-                </div>
-                <div class="${mainClass}__price">
-                    <span class="lable-price">Від:</span>
-                    <div class="${mainClass}__price-box">
-                        <span class="price">
-                            <span class="price-value">${cost}</span>
-                            <span class="price-symbol">грн</span>
-                        </span>
+                <div class="${mainClass}__body">                
+                    <div class="${mainClass}__name">
+                        <p>${name}</p>
+                    </div>
+                    <div class="${mainClass}__description">
+                        <p>${description}</p>
+                    </div>
+                    <div class="${mainClass}__price">
+                        <span class="lable-price">Від:</span>
+                        <div class="${mainClass}__price-box">
+                            <span class="price">
+                                <span class="price-value">${cost}</span>
+                                <span class="price-symbol">грн</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <button class="${mainClass}__button button">Консультація</button>
             </div>`;
-
-    render(item);
-}
-
-function render(item) {
-    itemPlace.append(item);
+    return item;
 }
