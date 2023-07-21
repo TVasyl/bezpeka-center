@@ -18,15 +18,19 @@
     &__nav-list {
     }
     &__nav-item {
+        padding-top: 5px;
+        padding-bottom: 5px;
         // height: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
         border-bottom: 1px solid rgb(255, 255, 255);
         // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         a {
+            display: block;
             color: black;
             padding-left: 20px;
             font-size: 16px;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
     }
 }
@@ -78,7 +82,7 @@
     background-color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     a {
-        color: $colorGreen;
+        color: #1ac2c2;
     }
 }
 

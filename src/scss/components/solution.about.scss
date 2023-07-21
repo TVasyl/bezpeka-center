@@ -14,12 +14,12 @@
     }
 
     &__contant {
-        position: relative;
+        // position: relative;
         padding: 20px;
         background-color: $darckGrey;
         color: #fff;
-        top: 20px;
-        left: 20px;
+        // top: 20px;
+        // left: 20px;
     }
 
     &__describe h3 {
@@ -34,7 +34,6 @@
         font-size: 16px;
         line-height: 150%;
         /* 24/16 */
-
     }
 }
 
@@ -97,7 +96,6 @@
             flex-direction: column;
         }
     }
-
 }
 
 @media (max-width: 767.98px) {
@@ -113,7 +111,6 @@
 
         &__item-text {
             text-align: center;
-
         }
     }
 }

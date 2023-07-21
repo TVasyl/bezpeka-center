@@ -21,28 +21,63 @@ switch (window.location.pathname) {
     // showMain("main");
     // break;
     case "/video-surveillance.html":
-        showExemple("video-surveillance");
+        showExemple("video-surveillance", ".app-items");
         break;
     case "/security-system.html":
-        showExemple("security-system");
+        showExemple("security-system", ".app-items");
         break;
     case "/intercom.html":
-        showExemple("intercom");
+        showExemple("intercom", ".app-items");
         break;
     case "/gate-automation.html":
-        showExemple("gate-automation");
+        showExemple("gate-automation", ".app-items");
         break;
     case "/access-control.html":
-        showExemple("access-control");
+        showExemple("access-control", ".app-items");
         break;
     case "/fire-alarm.html":
-        showExemple("fire-alarm");
+        showExemple("fire-alarm", ".app-items");
         break;
     case "/smart-home.html":
-        showExemple("smart-home");
+        showExemple("smart-home", ".app-items");
+        break;
+    case "/admin.html":
+        showAdmin();
         break;
     default:
         break;
+}
+
+function showAdmin() {
+    const adminLinks = document.querySelectorAll(".admin_link[data-adminlink]");
+    const adminBtn = document.querySelectorAll(".admin__nav-item");
+    // console.log(adminBtn);
+
+    if (adminBtn) {
+        adminBtn.forEach((btn) => {});
+    }
+    if (adminLinks) {
+        adminLinks.forEach((adminLink) => {
+            adminLink.addEventListener("click", onAdminLinkClick);
+        });
+    }
+
+    function onAdminLinkClick(e) {
+        e.preventDefault();
+        const adminLink = e.target;
+
+        const endpoint = adminLink.dataset.adminlink;
+        // console.log(endpoint);
+        showExemple(endpoint, ".admin__app-items");
+
+        adminBtn.forEach((btn) => {
+            btn.classList.remove("_active-nav-admin");
+        });
+        const btn = adminLink.closest(".admin__nav-item");
+        btn.classList.add("_active-nav-admin");
+    }
+
+    function adminMenuStyle() {}
 }
 
 /**

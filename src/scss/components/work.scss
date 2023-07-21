@@ -3,25 +3,25 @@
     &__container {
         padding: 90px 40px;
         background-color: #fff;
-
     }
 
-    &__title {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 370px;
-        background-color: $colorGreen;
+    // &__title {
+    // text-align: center;
+    // margin: 0 auto;
+    // max-width: 370px;
+    // background-color: $colorGreen;
 
-        h2 {
-            display: inline-block;
-            background-color: $darckGrey;
-            color: #fff;
-            padding: 5px 10px;
-            font-weight: 400;
-            position: relative;
-            top: -20px;
-        }
-    }
+    // h2 {
+    // display: inline-block;
+    // background-color: $darckGrey;
+    // color: #fff;
+    // color: $darckGrey;
+    // padding: 5px 10px;
+    // font-weight: 400;
+    // position: relative;
+    // top: -20px;
+    // }
+    // }
 
     &__swiper {
         padding-top: 40px;

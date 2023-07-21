@@ -41,7 +41,10 @@ body {
     background-color: #d9d9d9;
     border: 2px solid #d9d9d9;
 }
-
+.control:focus::placeholder {
+    opacity: 0;
+    transition: all 0.3s;
+}
 .title {
     font-size: 32px;
     font-weight: 600;
